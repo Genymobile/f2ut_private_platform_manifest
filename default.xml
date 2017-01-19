@@ -199,4 +199,8 @@
   <project path="ubuntu/ubuntu_prebuilt_initrd_debs" name="ubuntu/initrd/ubuntu_prebuilt_initrd_debs" revision="refs/heads/master" />
   <project path="ubuntu/ubuntu_prebuilt_initrd" name="ubuntu/initrd/ubuntu_prebuilt_initrd" revision="refs/heads/master" />
   <project path="ubuntu/prebuilts" name="ubuntu/prebuilts" revision="refs/heads/master" />
+
+  <project name="device/fairphone_devices/common" path="device/fairphone_devices/common" remote="fairphone" />
+  <project name="device/fairphone_devices/fairphone" path="device/fairphone_devices/FP2" remote="fairphone" />
+  <project name="device/fairphone_devices/sepolicy" path="device/fairphone_devices/sepolicy" remote="fairphone" />
 </manifest>
