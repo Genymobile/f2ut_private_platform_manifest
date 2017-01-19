@@ -28,137 +28,124 @@
 	fetch="http://github.com/TheMuppets"
 	revision="refs/heads/cm-12.1" />
 
+  <remote name="fairphone"
+	fetch="https://code.fairphone.com/gerrit/fp2-dev"
+	revision="fp2-sibon"
+	review="code.fairphone.com/gerrit"/>
+
   <default remote="phablet"
            sync-j="6" />
 
   <project path="build" name="ubports/android_build" groups="pdk,tradefed" remote="ubp" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="abi/cpp" name="android_abi_cpp" groups="pdk" remote="cm" />
-  <project path="bionic" name="ubports/android_bionic" groups="pdk" remote="ubp" revision="refs/heads/ubp-5.1.1" />
-  <project path="development" name="ubports/android_development" remote="ubp" />
+  <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" remote="fairphone" />
+  <project path="bionic" name="platform/bionic" groups="pdk" remote="fairphone" />
+  <project path="development" name="platform/development" remote="fairphone" />
   <project path="device-files" name="ubports/device-files" remote="ubp" />
   <project path="external/audioflingerglue" name="ubports/audioflingerglue" remote="ubp" />
 
   <project path="external/aac" name="aosp/platform/external/aac" groups="pdk" />
   <project path="external/bison" name="aosp/platform/external/bison" groups="pdk" />
-  <project path="external/bson" name="android_external_bson" remote="cm" />
+  <project path="external/bson" name="platform/external/bson" remote="fairphone" />
   <project path="external/bzip2" name="aosp/platform/external/bzip2" groups="pdk" />
   <project path="external/checkpolicy" name="aosp/platform/external/checkpolicy" groups="pdk" />
   <project path="external/compiler-rt" name="aosp/platform/external/compiler-rt" groups="pdk" />
-  <project path="external/connectivity" name="android_external_connectivity" remote="cm" />
-  <project path="external/e2fsprogs" name="ubports/android_external_e2fsprogs" groups="pdk" remote="ubp" />
+  <project path="external/connectivity" name="platform/external/connectivity" remote="fairphone" />
+  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" groups="pdk" remote="fairphone" />
   <project path="external/expat" name="aosp/platform/external/expat" groups="pdk" />
   <project path="external/exfat" name="android_external_exfat" groups="pdk" remote="cm" />
-  <project path="external/f2fs-tools" name="android_external_f2fs-tools" groups="pdk" remote="cm" />
+  <project path="external/f2fs-tools" name="platform/external/f2fs-tools" groups="pdk" remote="fairphone" />
   <project path="external/ffmpeg" name="android_external_ffmpeg" remote="cm" />
-  <project path="external/flac" name="android_external_flac" groups="pdk" remote="cm" />
+  <project path="external/flac" name="platform/external/flac" groups="pdk" remote="fairphone" />
   <project path="external/freetype" name="aosp/platform/external/freetype" groups="pdk" />
-  <project path="external/fsck_msdos" name="ubports/android_external_fsck_msdos" groups="pdk-cw-fs" remote="ubp" />
+  <project path="external/fsck_msdos" name="platform/external/fsck_msdos" groups="pdk-cw-fs" remote="fairphone" />
   <project path="external/fuse" name="android_external_fuse" remote="cm" />
   <project path="external/gcc-demangle" name="aosp/platform/external/gcc-demangle" groups="pdk" />
   <project path="external/genext2fs" name="aosp/platform/external/genext2fs" groups="pdk-cw-fs" />
   <project path="external/giflib" name="aosp/platform/external/giflib" groups="pdk-cw-fs" />
   <project path="external/gtest" name="aosp/platform/external/gtest" groups="pdk" />
   <project path="external/harfbuzz_ng" name="aosp/platform/external/harfbuzz_ng" groups="pdk-cw-fs" />
-  <project path="external/icu" name="android_external_icu" groups="pdk" remote="cm" />
-  <project path="external/iptables" name="android_external_iptables" groups="pdk" remote="cm" />
-  <project path="external/iproute2" name="android_external_iproute2" groups="pdk" remote="cm" />  
+  <project path="external/icu" name="platform/external/icu" groups="pdk" remote="fairphone" />
+  <project path="external/iptables" name="platform/external/iptables" groups="pdk" remote="fairphone" />
+  <project path="external/iproute2" name="platform/external/iproute2" groups="pdk" remote="fairphone" />
   <project path="external/jemalloc" name="aosp/platform/external/jemalloc" groups="pdk,flo" />
   <project path="external/jhead" name="aosp/platform/external/jhead" groups="pdk" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="external/jpeg" name="android_external_jpeg" groups="pdk" remote="cm" />
+  <project path="external/jpeg" name="platform/external/jpeg" groups="pdk" remote="fairphone" />
   <project path="external/jsmn" name="aosp/platform/external/jsmn" groups="pdk" />
   <project path="external/jsoncpp" name="aosp/platform/external/jsoncpp" groups="pdk-cw-fs" />
   <project path="external/kernel-headers" name="aosp/platform/external/kernel-headers" groups="pdk-cw-fs" />
   <project path="external/libcap-ng" name="aosp/platform/external/libcap-ng" />
-  <project path="external/libcxx" name="ubports/android_external_libcxx" remote="ubp" groups="pdk" />
+  <project path="external/libcxx" name="platform/external/libcxx" remote="fairphone" groups="pdk" />
   <project path="external/libcxxabi" name="aosp/platform/external/libcxxabi" groups="pdk" />
   <project path="external/libgsm" name="aosp/platform/external/libgsm" groups="pdk" />
   <project path="external/liblzf" name="aosp/platform/external/liblzf" groups="pdk" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
   <project path="external/libnl" name="aosp/platform/external/libnl" groups="pdk" />
   <project path="external/libogg" name="aosp/platform/external/libogg" groups="pdk" />
   <project path="external/libopus" name="aosp/platform/external/libopus" groups="pdk" />
-  <project path="external/libpng" name="ubports/android_external_libpng" groups="pdk" remote="ubp" />
-  <project path="external/libselinux" name="android_external_libselinux" remote="cm" />
-  <project path="external/libsepol" name="android_external_libsepol" groups="pdk" remote="cm" />
+  <project path="external/libpng" name="platform/external/libpng" groups="pdk" remote="fairphone" />
+  <project path="external/libselinux" name="platform/external/libselinux" remote="fairphone" />
+  <project path="external/libsepol" name="platform/external/libsepol" groups="pdk" remote="fairphone" />
   <project path="external/libunwind" name="aosp/platform/external/libunwind" groups="pdk" />
-  <project path="external/libvpx" name="android_external_libvpx" groups="pdk" remote="cm" />
-  <project path="external/libxml2" name="android_external_libxml2" groups="pdk" remote="cm"/>
+  <project path="external/libvpx" name="platform/external/libvpx" groups="pdk" remote="fairphone" />
+  <project path="external/libxml2" name="platform/external/libxml2" groups="pdk" remote="fairphone"/>
   <project path="external/lz4" name="android_external_lz4" remote="cm" />
-  <project path="external/lzma" name="android_external_lzma" remote="cm" />
+  <project path="external/lzma" name="platform/external/lzma" remote="fairphone" />
   <project path="external/mdnsresponder" name="aosp/platform/external/mdnsresponder" groups="pdk" />
-  <project path="external/mksh" name="android_external_mksh" groups="pdk" remote="cm" />
-  <project path="external/openssl" name="ubports/android_external_openssl" groups="pdk" remote="ubp" />
-  <project path="external/pcre" name="android_external_pcre" groups="pdk-cw-fs" remote="cm" />
+  <project path="external/mksh" name="platform/external/mksh" groups="pdk" remote="fairphone" />
+  <project path="external/openssl" name="platform/external/openssl" groups="pdk" remote="fairphone" />
+  <project path="external/pcre" name="platform/external/pcre" groups="pdk-cw-fs" remote="fairphone" />
   <project path="external/protobuf" name="aosp/platform/external/protobuf" groups="pdk" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
   <project path="external/qemu" name="aosp/platform/external/qemu" groups="pdk-cw-fs" />
   <project path="external/qemu-pc-bios" name="aosp/platform/external/qemu-pc-bios" groups="pdk-cw-fs" />
   <project path="external/safe-iop" name="aosp/platform/external/safe-iop" groups="pdk" />
   <project path="external/scrypt" name="aosp/platform/external/scrypt" groups="pdk" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="external/sepolicy" name="ubports/android_external_sepolicy" groups="pdk" remote="ubp" />
+  <project path="external/sepolicy" name="platform/external/sepolicy" groups="pdk" remote="fairphone" />
   <project path="external/sfntly" name="aosp/platform/external/sfntly" groups="pdk-cw-fs" />
-  <project path="external/skia" name="android_external_skia" groups="pdk-cw-fs" remote="cm" />
-  <project path="external/sonivox" name="android_external_sonivox" groups="pdk" remote="cm" />
-  <project path="external/speex" name="android_external_speex" groups="pdk" remote="cm" />
-  <project path="external/sqlite" name="android_external_sqlite" groups="pdk" remote="cm" />
+  <project path="external/skia" name="platform/external/skia" groups="pdk-cw-fs" remote="fairphone" />
+  <project path="external/sonivox" name="platform/external/sonivox" groups="pdk" remote="fairphone" />
+  <project path="external/speex" name="platform/external/speex" groups="pdk" remote="fairphone" />
+  <project path="external/sqlite" name="platform/external/sqlite" groups="pdk" remote="fairphone" />
   <project path="external/stagefright-plugins" name="android_external_stagefright-plugins" remote="cm" />
   <project path="external/stlport" name="aosp/platform/external/stlport" groups="pdk" />
-  <project path="external/strace" name="android_external_strace" groups="pdk-cw-fs" remote="cm" />
+  <project path="external/strace" name="platform/external/strace" groups="pdk-cw-fs" remote="fairphone" />
   <project path="external/libtar" name="android_external_libtar" remote="cm" />
-  <project path="external/tinyalsa" name="android_external_tinyalsa" groups="pdk" remote="cm" />
-  <project path="external/tinycompress" name="android_external_tinycompress" groups="pdk" remote="cm" />
+  <project path="external/tinyalsa" name="platform/external/tinyalsa" groups="pdk" remote="fairphone" />
+  <project path="external/tinycompress" name="platform/external/tinycompress" groups="pdk" remote="fairphone" />
   <project path="external/tremolo" name="aosp/platform/external/tremolo" groups="pdk" />
   <project path="external/webp" name="aosp/platform/external/webp" groups="pdk-cw-fs" />
   <project path="external/webrtc" name="aosp/platform/external/webrtc" groups="pdk" />
-  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" groups="pdk" remote="cm" />
+  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" groups="pdk" remote="fairphone" />
   <project path="external/yaffs2" name="aosp/platform/external/yaffs2" groups="pdk" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="external/zlib" name="ubports/android_external_zlib" groups="pdk" remote="ubp" />
+  <project path="external/zlib" name="platform/external/zlib" groups="pdk" remote="fairphone" />
   <project path="external/zopfli" name="aosp/platform/external/zopfli" groups="pdk-cw-fs" />
-  <project path="frameworks/av" name="ubports/android_frameworks_av" groups="pdk" remote="ubp" />
-  <project path="frameworks/base" name="ubports/android_frameworks_base" groups="pdk-cw-fs" remote="ubp" />
-  <project path="frameworks/native" name="ubports/android_frameworks_native" groups="pdk" remote="ubp" />
-  <project path="frameworks/opt/emoji" name="android_frameworks_opt_emoji" groups="pdk-cw-fs" remote="cm" />
-  <project path="hardware/akm" name="android_hardware_akm" remote="cm" />
-  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" groups="pdk" remote="cm" />
-  <project path="hardware/broadcom/wlan" name="android_hardware_broadcom_wlan" groups="broadcom_wlan" remote="cm" />
-  <project path="hardware/invensense" name="android_hardware_invensense" groups="invensense" remote="cm" />
-  <project path="hardware/libhardware" name="ubports/android_hardware_libhardware" groups="pdk" remote="ubp" />
-  <project path="hardware/libhardware_legacy" name="ubports/android_hardware_libhardware_legacy" groups="pdk" remote="ubp" />
+  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" remote="fairphone" />
+  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs" remote="fairphone" />
+  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" remote="fairphone" />
+  <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" groups="pdk-cw-fs" remote="fairphone" />
 
-  <project path="hardware/qcom/audio/default" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" />
-  <project path="hardware/qcom/audio-caf/apq8084" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" revision="cm-12.1-caf-8084" />
-  <project path="hardware/qcom/audio-caf/msm8916" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" revision="cm-12.1-caf-8916" />
-  <project path="hardware/qcom/audio-caf/msm8960" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" revision="cm-12.1-caf-8960" />
-  <project path="hardware/qcom/audio-caf/msm8974" name="ubports/android_hardware_qcom_audio" remote="ubp" groups="qcom,qcom_audio" revision="ubp-5.1-caf-8974" />
-  <project path="hardware/qcom/audio-caf/msm8994" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" revision="cm-12.1-caf-8994" />
-  <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" groups="qcom" remote="cm" />
-  <project path="hardware/qcom/display" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" />
-  <project path="hardware/qcom/display-caf/apq8084" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" revision="cm-12.1-caf-8084" />
-  <project path="hardware/qcom/display-caf/msm8916" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" revision="cm-12.1-caf-8916" />
-  <project path="hardware/qcom/display-caf/msm8960" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" revision="cm-12.1-caf-8960" />
-  <project path="hardware/qcom/display-caf/msm8974" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" revision="ubp-5.1-caf-8974" />
-  <project path="hardware/qcom/display-caf/msm8994" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" revision="cm-12.1-caf-8994" />
-  <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" groups="qcom" remote="cm" />
-  <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" groups="qcom" remote="cm" />
-  <project path="hardware/qcom/media/default" name="android_hardware_qcom_media" groups="qcom" remote="cm" />
-  <project path="hardware/qcom/media-caf/apq8084" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8084" remote="cm" />
-  <project path="hardware/qcom/media-caf/msm8916" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8916" remote="cm" />
-  <project path="hardware/qcom/media-caf/msm8960" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8960" remote="cm" />
-  <project path="hardware/qcom/media-caf/msm8974" name="ubports/android_hardware_qcom_media" groups="qcom" revision="ubp-5.1-caf-8974" remote="ubp" />
-  <project path="hardware/qcom/media-caf/msm8994" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8994" remote="cm" />
-  <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" remote="aosp" groups="qcom_msm8960" />
-  <project path="hardware/qcom/msm8x26" name="platform/hardware/qcom/msm8x26" remote="aosp" groups="qcom_msm8x26" />
-  <project path="hardware/qcom/msm8x27" name="platform/hardware/qcom/msm8x27" remote="aosp" groups="qcom_msm8x27" />
-  <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" remote="aosp" groups="qcom_msm8x74" />
-  <project path="hardware/qcom/msm8x84" name="platform/hardware/qcom/msm8x84" remote="aosp" groups="qcom_msm8x84" />
-  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="cm" groups="qcom_wlan" />
+  <project path="hardware/akm" name="platform/hardware/akm" remote="fairphone" />
+  <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" remote="fairphone" />
+  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" remote="fairphone" />
+  <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" remote="fairphone" />
+  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" remote="fairphone" />
+  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" remote="fairphone" />
 
-  <project path="hardware/ril" name="ubports/android_hardware_ril" groups="pdk" remote="ubp" />
-  <project path="hardware/samsung_slsi/exynos5" name="android_hardware_samsung_slsi_exynos5" groups="exynos5" remote="cm" />
-  <project path="hardware/ti/omap3" name="aosp/platform/hardware/ti/omap3" groups="omap3" />
-  <project path="hardware/ti/omap4-aah" name="aosp/platform/hardware/ti/omap4-aah" groups="omap4-aah" />
-  <project path="hardware/ti/omap4xxx" name="android_hardware_ti_omap4xxx" groups="omap4" remote="cm" />
-  <project path="libnativehelper" name="android_libnativehelper" groups="pdk" remote="cm" />
+  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,default" remote="fairphone" />
+  <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" remote="fairphone" />
+  <project path="hardware/qcom/display" name="platform/hardware/qcom/display" remote="fairphone" groups="qcom,qcom_display" />
+  <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" groups="qcom" remote="fairphone" />
+  <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom" remote="fairphone" />
+  <project path="hardware/qcom/media" name="platform/hardware/qcom/media" groups="qcom" remote="fairphone" />
+  <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" groups="qcom_wlan" remote="fairphone" />
+
+  <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" remote="fairphone" />
+  <project path="hardware/samsung_slsi/exynos5" name="platform/hardware/samsung_slsi/exynos5" groups="exynos5" remote="fairphone" />
+  <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" groups="omap3" remote="fairphone" />
+  <project path="hardware/ti/omap4-aah" name="platform/hardware/ti/omap4-aah" groups="omap4-aah" remote="fairphone" />
+  <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" groups="omap4" remote="fairphone" />
+
+  <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" remote="fairphone" />
   <project path="prebuilts/clang/linux-x86/3.1" name="aosp/platform/prebuilts/clang/linux-x86/3.1" groups="pdk,linux" />
   <project path="prebuilts/clang/linux-x86/3.2" name="aosp/platform/prebuilts/clang/linux-x86/3.2" groups="pdk,linux" />
   <project path="prebuilts/clang/linux-x86/arm/3.3" name="aosp/platform/prebuilts/clang/linux-x86/arm/3.3" groups="arm,linux,pdk-cw-fs" />
@@ -184,17 +171,17 @@
   <project path="prebuilts/qemu-kernel" name="aosp/platform/prebuilts/qemu-kernel" groups="pdk" clone-depth="1" />
   <project path="prebuilts/tools" name="aosp/platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="aosp/platform/sdk" groups="pdk-cw-fs" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="system/core" name="ubports/android_system_core" groups="pdk" remote="ubp" />
-  <project path="system/extras" name="ubports/android_system_extras" groups="pdk" remote="ubp" />
-  <project path="system/keymaster" name="android_system_keymaster" groups="pdk" remote="cm" />
-  <project path="system/media" name="android_system_media" groups="pdk" remote="cm" />
-  <project path="system/netd" name="android_system_netd" groups="pdk" remote="cm" />
-  <project path="system/qcom" name="android_system_qcom" groups="pdk" remote="cm" />
-  <project path="system/security" name="android_system_security" groups="pdk" remote="cm" />
-  <project path="system/vold" name="ubports/android_system_vold" groups="pdk" remote="ubp" />
+  <project path="system/core" name="platform/system/core" groups="pdk" remote="fairphone" />
+  <project path="system/extras" name="platform/system/extras" groups="pdk" remote="fairphone" />
+  <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" remote="fairphone" />
+  <project path="system/media" name="platform/system/media" groups="pdk" remote="fairphone" />
+  <project path="system/netd" name="platform/system/netd" groups="pdk" remote="fairphone" />
+  <project path="system/qcom" name="platform/system/qcom" groups="pdk" remote="fairphone" />
+  <project path="system/security" name="platform/system/security" groups="pdk" remote="fairphone" />
+  <project path="system/vold" name="platform/system/vold" groups="pdk" remote="fairphone" />
   <project path="tools/external/fat32lib" name="aosp/platform/tools/external/fat32lib" groups="tools" />
 
-  <project path="vendor/cm" name="ubports/android_vendor_cm" remote="ubp" />
+  <!-- <project path="vendor/cm" name="ubports/android_vendor_cm" remote="ubp" /> -->
 
   <project path="bootable/recovery" name="ubports/android_bootable_recovery" groups="pdk" remote="ubp" /> 
 
