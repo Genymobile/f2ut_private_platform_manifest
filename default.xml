@@ -209,7 +209,7 @@
   <project path="ubuntu/prebuilts" name="ubuntu/prebuilts" revision="refs/heads/master" />
 
   <project name="device/fairphone_devices/common" path="device/fairphone_devices/common" remote="fairphone" />
-  <project name="device/fairphone_devices/fairphone" path="device/fairphone_devices/FP2" remote="fairphone" />
+  <project name="f2ut_device_fairphone_FP2" path="device/fairphone_devices/FP2" remote="genymobile" />
   <project name="device/fairphone_devices/sepolicy" path="device/fairphone_devices/sepolicy" remote="fairphone" />
 
   <project name="platform/vendor/qcom-opensource/bluetooth" path="vendor/qcom/opensource/bluetooth" remote="fairphone" />
