@@ -139,7 +139,7 @@
   <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" remote="fairphone" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" remote="fairphone" />
 
-  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,default" remote="fairphone" />
+  <project path="hardware/qcom/audio" name="f2ut_platform_hardware_qcom_audio" groups="qcom,default" remote="genymobile" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" remote="fairphone" />
   <project path="hardware/qcom/display" name="platform/hardware/qcom/display" remote="fairphone" groups="qcom,qcom_display" />
   <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" groups="qcom" remote="fairphone" />
