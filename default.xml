@@ -179,7 +179,7 @@
   <project path="prebuilts/qemu-kernel" name="aosp/platform/prebuilts/qemu-kernel" groups="pdk" clone-depth="1" />
   <project path="prebuilts/tools" name="aosp/platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="aosp/platform/sdk" groups="pdk-cw-fs" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="system/core" name="f2ut_platform_system_core" groups="pdk" remote="genymobile" />
+  <project path="system/core" name="f2ut_system_core" groups="pdk" remote="genymobile" />
   <project path="system/extras" name="f2ut_platform_system_extras" groups="pdk" remote="genymobile" />
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" remote="fairphone" />
   <project path="system/media" name="platform/system/media" groups="pdk" remote="fairphone" />
