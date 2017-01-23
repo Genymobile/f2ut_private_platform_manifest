@@ -226,7 +226,7 @@
   <project name="platform/vendor/qcom/msm8610" path="device/qcom/msm8610" remote="fairphone" />
 
   <project name="f2ut_kernel_fairphone" path="kernel" remote="genymobile" />
-  <project name="device/qcom/common" path="device/qcom/common" remote="fairphone" >
+  <project name="f2ut_device_qcom_common" path="device/qcom/common" remote="genymobile" >
     <copyfile dest="build.sh" src="build.sh"/>
     <copyfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
   </project>
